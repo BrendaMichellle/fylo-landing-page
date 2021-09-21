@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
-}
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-weights - 400 - 700
+*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: hsl(218, 28%, 13%);
+  background-image: url('./images/bg-curvy-mobile.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1,
+h2,
+.navbar__item {
+  font-family: 'Raleway', sans-serif;
+}
+
+/*----- Header & Navbar -----*/
+
+.header__navbar {
+  background-color: hsl(217, 28%, 15%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  width: fit-content;
+  height: fit-content;
+  width: 100px;
+  height: 30px;
+}
+
+.navbar li {
+  color: white;
+  display: inline;
+  padding: 0 10px;
+}
+
+.hero__img,
+.Cta__img {
+  width: 80vw;
+  max-width: 400px;
+  max-height: 40vh;
+}
+
+@media screen and (min-width: 500px) {
+  .header__navbar {
+    padding: 35px;
   }
-  to {
-    transform: rotate(360deg);
+  .logo {
+    width: 180px;
+    height: 55px;
   }
+  .navbar li {
+    font-size: 1.3rem;
+  }
+}
+
+/*----- Hero Section -----*/
+.hero__section {
+  background-color: hsl(217, 28%, 15%);
+  background-image: url('./images/bg-curvy-mobile.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 25px;
+}
+
+.hero__img,
+.hero__desc,
+.hero__CTA {
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+
+.hero__img {
+  margin-bottom: 20px;
+}
+
+.hero__desc {
+  padding: 0 25px;
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+/*----- Card Section -----*/
+.card__section {
+  margin-top: 50px;
+}
+
+.card__section,
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.card__img {
+  width: 60px;
+  height: 60px;
+}
+
+.card__title,
+.card__desc {
+  padding: 0 40px;
+}
+
+@media screen and (min-width: 500px) {
+  .card__section {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+/*----- Reviews Section -----*/
+.reviews__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review {
+  background-color: hsl(219, 30%, 18%);
+  border-radius: 5px;
+  width: 76vw;
+  height: fit-content;
+  display: grid;
+  grid-template-areas:
+    'desc desc'
+    'img info';
+  justify-items: start;
+  margin-bottom: 20px;
+  padding: 5px 15px 0 15px;
+}
+
+.review__desc {
+  grid-area: desc;
+}
+
+.profile__img {
+  grid-area: img;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-self: center;
+  position: relative;
+  top: -10px;
+}
+
+.profile__info {
+  grid-area: info;
+  align-self: start;
+  position: relative;
+  left: -85px;
+  top: -10px;
+  font-weight: 700;
+}
+
+.position {
+  font-weight: 400;
+}
+
+/*----- Subscription -----*/
+
+/*----- Footer ------*/
+.footer {
+  background-color: hsl(216, 53%, 9%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer__img {
+  align-self: flex-start;
 }
