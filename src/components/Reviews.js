@@ -1,7 +1,6 @@
 import profile1 from '../images/profile-1.jpg';
 import profile2 from '../images/profile-2.jpg';
 import profile3 from '../images/profile-3.jpg';
-import quotes from '../images/bg-quotes.png';
 
 const reviewsData = [
   {
@@ -30,13 +29,14 @@ const reviewsData = [
 function Reviews () {
   return (
     <section className="reviews__section">
-    <img src={quotes} alt="" />
     {
       reviewsData.map(review => (
         <div className="review">
           <p className="review__desc">{review.desc}</p>
-          <img src={review.img} alt="" className="profile__img"/>
-          <p className="profile__info">{review.name} <br /> <span className="position">{review.position}</span></p>
+          <div className="info__section">
+            <img src={review.img} alt="" className="profile__img"/>
+            <p className="profile__info">{review.name} <br /> <span className="position">{review.position}</span></p>
+          </div>
         </div>
       ))
     }

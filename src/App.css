@@ -54,7 +54,7 @@ h2,
 .Cta__img {
   width: 80vw;
   max-width: 400px;
-  max-height: 40vh;
+  /*max-height: 40vh;*/
 }
 
 @media screen and (min-width: 500px) {
@@ -76,7 +76,7 @@ h2,
   background-image: url('./images/bg-curvy-mobile.svg');
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +103,7 @@ h2,
 }
 /*----- Card Section -----*/
 .card__section {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .card__section,
@@ -141,6 +141,35 @@ h2,
     justify-items: center;
     align-items: center;
   }
+  .hero__img {
+    max-width: 50%;
+  }
+}
+
+/*----- CTA Section -------*/
+.Cta__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 25px;
+  margin-top: 60px;
+}
+
+.Cta__img {
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.Cta__br {
+  margin: 5px 0;
+}
+
+.Cta__link {
+  color: hsl(176, 68%, 64%);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid hsl(176, 68%, 64%);
 }
 
 /*----- Reviews Section -----*/
@@ -149,6 +178,7 @@ h2,
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 }
 
 .review {
@@ -159,7 +189,7 @@ h2,
   display: grid;
   grid-template-areas:
     'desc desc'
-    'img info';
+    'info info';
   justify-items: start;
   margin-bottom: 20px;
   padding: 5px 15px 0 15px;
@@ -169,40 +199,148 @@ h2,
   grid-area: desc;
 }
 
+.info__section {
+  grid-area: info;
+  display: grid;
+  grid-template-areas:
+    'img name'
+    'img position';
+}
+
 .profile__img {
-  grid-area: img;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   align-self: center;
-  position: relative;
-  top: -10px;
+  grid-area: img;
 }
 
 .profile__info {
-  grid-area: info;
-  align-self: start;
-  position: relative;
-  left: -85px;
-  top: -10px;
+  display: inline;
+  align-self: center;
   font-weight: 700;
+  grid-area: name;
+  margin-left: 10px;
 }
 
 .position {
   font-weight: 400;
+  grid-area: position;
+}
+
+@media screen and (min-width: 800px) {
+  .reviews__section {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+  .review {
+    max-width: fit-content;
+    margin: 5px;
+  }
 }
 
 /*----- Subscription -----*/
+.form {
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: hsl(217, 28%, 15%);
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.form__desc {
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.form__input {
+  width: 70vw;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  position: relative;
+  left: 30px;
+  opacity: 0.5;
+}
 /*----- Footer ------*/
 .footer {
   background-color: hsl(216, 53%, 9%);
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 }
 
 .footer__img {
   align-self: flex-start;
+  margin: 200px 0 20px 25px;
+}
+
+.footer__info,
+.footer__nav1,
+.footer__nav2 {
+  margin: 0 0 35px 25px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info__icon {
+  margin-right: 10px;
+}
+
+.location {
+  align-self: flex-start;
+  position: relative;
+  top: 15px;
+}
+
+.footer__nav1,
+.footer__nav2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer__socials {
+  align-self: center;
+  margin: 35px 0;
+}
+
+.socials__icon {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.socials__icon:nth-child(2) {
+  margin: 0 8px;
 }
