@@ -37,7 +37,7 @@ function Card() {
         dataList.map(data => (
         <div className="card">
           <img src={data.img} alt="" className="card__img"/>
-          <h2 className="card__title">{data.title}</h2>
+          <h3 className="card__title">{data.title}</h3>
           <p className="card__desc">{data.desc}</p>
         </div>
         ))

@@ -20,6 +20,18 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 2.35em;
+}
+
+h2 {
+  font-size: 2.15em;
+}
+
+h3 {
+  font-size: 1.15em;
+}
+
 h1,
 h2,
 .navbar__item {
@@ -126,7 +138,11 @@ h2,
 
 .card__title,
 .card__desc {
-  padding: 0 40px;
+  padding: 0 35px;
+}
+
+.card__title {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 500px) {
@@ -170,6 +186,24 @@ h2,
   text-decoration: none;
   padding-bottom: 3px;
   border-bottom: 1px solid hsl(176, 68%, 64%);
+}
+
+@media screen and (min-width: 500px) {
+  .Cta__section {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-areas: 'img text';
+    grid-gap: 50px;
+  }
+  .Cta__img {
+    grid-area: img;
+  }
+
+  .Cta__text {
+    grid-area: text;
+  }
 }
 
 /*----- Reviews Section -----*/
@@ -259,6 +293,8 @@ h2,
   padding: 20px 25px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  top: 100px;
 }
 
 .form__desc {
@@ -278,6 +314,12 @@ h2,
   position: relative;
   left: 30px;
   opacity: 0.5;
+}
+
+@media screen and (min-width: 500px) {
+  .form {
+    max-width: 1000px;
+  }
 }
 /*----- Footer ------*/
 .footer {
@@ -343,4 +385,14 @@ h2,
 
 .socials__icon:nth-child(2) {
   margin: 0 8px;
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .footer__img {
+    margin: 0;
+  }
 }
