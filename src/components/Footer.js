@@ -7,17 +7,18 @@ import emailIcon from '../images/icon-email.svg';
 function Footer() {
   return (
     <section className="footer">
-      <img src={Logo} alt="" className="footer__img"/>
+    <img src={Logo} alt="" className="footer__img"/>
+      <div className="footer__content">
       <div className="footer__info">
-        <div className="info">
+        <div className="info contact__location">
           <img src={locationIcon} alt="" className="info__icon location"/>
           <p className="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
-        <div className="info">
+        <div className="info contact__phone">
           <img src={phoneIcon} alt="" className="info__icon"/>
           <p className="info__text">+1-543-123-4567</p>
         </div>
-        <div className="info">
+        <div className="info contact__email">
           <img src={emailIcon} alt="" className="info__icon" />
           <p className="info__text">example@fylo.com</p>
         </div>
@@ -37,6 +38,7 @@ function Footer() {
         <i className="fab fa-facebook-f socials__icon"></i>
         <i className="fab fa-twitter socials__icon"></i>
         <i className="fab fa-instagram socials__icon"></i>
+      </div>
       </div>
     </section>
   )

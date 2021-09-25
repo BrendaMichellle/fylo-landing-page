@@ -342,6 +342,10 @@ h2,
 .footer {
   background-color: hsl(216, 53%, 9%);
   width: 100vw;
+}
+
+.footer,
+.footer__content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -406,29 +410,39 @@ h2,
 
 @media screen and (min-width: 600px) {
   .footer {
-    width: 100%;
-    display: grid;
-    grid-template-areas:
-      'img img img img'
-      'info nav1 nav2 socials';
-    justify-items: start;
-    padding: 200px 0 100px 0;
+    max-width: 100vw;
   }
+  .footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 200px 0px 100px 0px;
+    overflow: hidden;
+  }
+
   .footer__img {
-    grid-area: img;
     margin: 0;
+    position: relative;
+    top: 150px;
+    left: 50px;
   }
   .footer__info {
     grid-area: info;
-    max-width: 40%;
+    max-width: 60%;
+    display: grid;
+    grid-template-areas:
+      'location phone'
+      'location email';
+    justify-items: center;
+    grid-column-gap: 80px;
   }
-  .footer__nav1 {
-    grid-area: nav1;
+  .contact__location {
+    grid-area: location;
   }
-  .footer__nav2 {
-    grid-area: nav2;
+  .contact__phone {
+    grid-area: phone;
   }
-  .footer__socials {
-    grid-area: socials;
+  .contact__email {
+    grid-area: email;
   }
 }
