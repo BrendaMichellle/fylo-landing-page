@@ -188,7 +188,7 @@ h2,
   border-bottom: 1px solid hsl(176, 68%, 64%);
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   .Cta__section {
     max-width: 1000px;
     margin-left: auto;
@@ -281,7 +281,7 @@ h2,
 
 /*----- Subscription -----*/
 .form {
-  max-width: 80vw;
+  max-width: 75vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -316,9 +316,26 @@ h2,
   opacity: 0.5;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   .form {
-    max-width: 1000px;
+    max-width: 900px;
+  }
+  .form__sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .form__title {
+    margin-bottom: 0;
+  }
+  .form__desc {
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+  .form__input {
+    width: 60%;
   }
 }
 /*----- Footer ------*/
@@ -389,10 +406,29 @@ h2,
 
 @media screen and (min-width: 600px) {
   .footer {
-    flex-direction: row;
-    justify-content: flex-end;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      'img img img img'
+      'info nav1 nav2 socials';
+    justify-items: start;
+    padding: 200px 0 100px 0;
   }
   .footer__img {
+    grid-area: img;
     margin: 0;
+  }
+  .footer__info {
+    grid-area: info;
+    max-width: 40%;
+  }
+  .footer__nav1 {
+    grid-area: nav1;
+  }
+  .footer__nav2 {
+    grid-area: nav2;
+  }
+  .footer__socials {
+    grid-area: socials;
   }
 }

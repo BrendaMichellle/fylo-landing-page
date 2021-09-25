@@ -12,5 +12,6 @@ export const Button = styled.button`
     margin-bottom: 15px;
     @media screen and (min-width: 500px) {
         max-width: 250px;
+        display: inline;
     }
 `
