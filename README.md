@@ -11,7 +11,7 @@ This is a solution to the [Fylo dark theme landing page challenge on Frontend Me
 
 ### Screenshot
 
-<img src="./images/desktopgif.gif" alt="">
+<img src="/images/desktopgif.gif" alt="">
 
 ### Links
 
