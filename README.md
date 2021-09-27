@@ -11,12 +11,12 @@ This is a solution to the [Fylo dark theme landing page challenge on Frontend Me
 
 ### Screenshot
 
-<img src="/images/desktopgif.gif" alt="">
+<img src="/images/desktop-preview.jpg" alt="">
 
 ### Links
 
-- Solution URL: [View solution](https://www.frontendmentor.io/solutions/responsive-stats-preview-card-component-html5-sassscss-kxpiOE5Tt)
-- Live Site: [live site](https://brendamichellle.github.io/statsPreviewComponent/)
+- Solution URL: [View solution](https://www.frontendmentor.io/solutions/fylo-landing-page-reactjs-urk0H-GJV)
+- Live Site: [live site](https://fylo32.netlify.app/)
 
 ## My process
 
